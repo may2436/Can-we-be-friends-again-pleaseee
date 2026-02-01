@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can We Be Friends Again?</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #fde2e4, #e2f0ff);
+      font-family: 'Quicksand', sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: auto;
+      background: white;
+      border-radius: 22px;
+      padding: 25px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 25px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .box {
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 15px;
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 12px 22px;
+      border: none;
+      border-radius: 30px;
+      font-size: 15px;
+      cursor: pointer;
+      margin: 8px;
+    }
+
+    .yes {
+      background: #fb7185;
+      color: white;
+    }
+
+    .no {
+      background: #e5e7eb;
+      position: absolute;
+    }
+
+    .buttons {
+      position: relative;
+      height: 120px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- 1. Photo -->
+  <img src="us.jpg,jpeg" alt="Us ❤️">
+
+  <!-- 2. Landing -->
+  <h1>Hey… I miss us 🥹</h1>
+  <p>This website exists because I like you more than being mad.</p>
+
+  <!-- 3. Mood Button -->
+  <div class="box">
+    <p>Click this if you’re tired of being mad.</p>
+    <button class="yes" onclick="alert('Okay good. Step one complete 💗')">Mood Reset 💫</button>
+  </div>
+
+  <!-- 4. Soft Apology -->
+  <div class="box">
+    <p>
+      I may have been a little dramatic.  
+      You may have been a little annoying.  
+      But I still choose you.
+    </p>
+  </div>
+
+  <!-- 5. Reasons -->
+  <div class="box">
+    <h2>Reasons I Like You</h2>
+    <p>• You feel like home<br>
+       • You make bad days better<br>
+       • You’re my favorite person</p>
+  </div>
+
+  <!-- 6. Friendship Contract -->
+  <div class="box">
+    <h2>Temporary Truce Agreement 🤝</h2>
+    <p>
+      ✔ Be nice again<br>
+      ✔ No passive aggression<br>
+      ✔ Hugs encouraged<br>
+      ✔ Talk it out later
+    </p>
+  </div>
+
+  <!-- 7. Memory -->
+  <div class="box">
+    <p>
+      Remember when we laughed at absolutely nothing  
+      and it was still perfect?
+    </p>
+  </div>
+
+  <!-- 8. Yes / No -->
+  <h2>So… should we stop being mad and be us again?</h2>
+
+  <div class="buttons">
+    <button class="yes" onclick="yesClicked()">Yes 💖</button>
+    <button class="no" id="noBtn" ontouchstart="moveNo()" onmouseover="moveNo()">No 😐</button>
+  </div>
+
+</div>
+
+<script>
+  function moveNo() {
+    const btn = document.getElementById("noBtn");
+    const maxX = 250;
+    const maxY = 80;
+
+    btn.style.left = Math.random() * maxX + "px";
+    btn.style.top = Math.random() * maxY + "px";
+  }
+
+  function yesClicked() {
+    document.body.innerHTML = `
+      <div style="
+        height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        font-family:'Quicksand',sans-serif;
+        background:linear-gradient(135deg,#fde2e4,#e2f0ff);
+        padding:20px;">
+        <h1>
+          YAY 🥹💗<br><br>
+          Okay, we’re friends again.<br>
+          Come talk to me pleasee 🤍
+        </h1>
+      </div>
+    `;
+  }
+</script>
+
+</body>
+</html>
